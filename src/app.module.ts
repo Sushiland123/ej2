@@ -8,6 +8,7 @@ import { OrdenModule } from './orden/orden.module';
 import { ReservaModule } from './reserva/reserva.module';
 import { ComentarioModule } from './comentario/comentario.module';
 import { AuthModule } from './auth/auth.module';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { AuthModule } from './auth/auth.module';
       port: 5433,
       username: 'postgres',
       password: 'SUSER',
-      database: 'Dapis',
+      database: 'xdbd',
       autoLoadEntities: true, // Carga automáticamente 
       synchronize: true,     
     }),
@@ -27,6 +28,7 @@ import { AuthModule } from './auth/auth.module';
     ReservaModule,
     ComentarioModule,
     AuthModule,
+    UsuarioModule,
   ],
 })
 export class AppModule {}
